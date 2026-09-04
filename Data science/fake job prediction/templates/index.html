@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fake Job Detection System</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body{
+            background: linear-gradient(135deg,#1e3c72,#2a5298);
+            min-height:100vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+        }
+
+        .container{
+            width:90%;
+            max-width:700px;
+            background:white;
+            padding:35px;
+            border-radius:20px;
+            box-shadow:0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        h1{
+            text-align:center;
+            color:#1e3c72;
+            margin-bottom:10px;
+        }
+
+        p{
+            text-align:center;
+            color:#666;
+            margin-bottom:25px;
+        }
+
+        textarea{
+            width:100%;
+            height:220px;
+            padding:15px;
+            border:2px solid #ddd;
+            border-radius:12px;
+            resize:none;
+            font-size:15px;
+            outline:none;
+        }
+
+        textarea:focus{
+            border-color:#2a5298;
+        }
+
+        button{
+            width:100%;
+            padding:14px;
+            margin-top:15px;
+            border:none;
+            border-radius:12px;
+            background:#1e3c72;
+            color:white;
+            font-size:17px;
+            cursor:pointer;
+            transition:0.3s;
+        }
+
+        button:hover{
+            background:#16315c;
+        }
+
+        .result{
+            margin-top:25px;
+            padding:15px;
+            border-radius:12px;
+            text-align:center;
+            font-size:18px;
+            font-weight:bold;
+        }
+
+        .fake{
+            background:#ffe5e5;
+            color:#d63031;
+            border:2px solid #ff7675;
+        }
+
+        .real{
+            background:#e8fff0;
+            color:#00b894;
+            border:2px solid #55efc4;
+        }
+
+        footer{
+            margin-top:20px;
+            text-align:center;
+            color:#888;
+            font-size:13px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>🔍 Fake Job Detection System</h1>
+
+    <p>
+        Enter a job description below to identify whether
+        it is Genuine or Fake.
+    </p>
+
+    <form method="POST">
+
+        <textarea
+            name="job"
+            placeholder="Paste Job Description Here..."
+            required></textarea>
+
+        <button type="submit">
+            Analyze Job Posting
+        </button>
+
+    </form>
+
+    {% if prediction %}
+
+        {% if "Fake" in prediction %}
+            <div class="result fake">
+                ⚠ {{ prediction }}
+            </div>
+        {% else %}
+            <div class="result real">
+                ✅ {{ prediction }}
+            </div>
+        {% endif %}
+
+    {% endif %}
+
+    <footer>
+        AI & Data Science Mini Project
+    </footer>
+
+</div>
+
+</body>
+</html>

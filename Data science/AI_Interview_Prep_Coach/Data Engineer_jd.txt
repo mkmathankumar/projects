@@ -1,0 +1,14 @@
+Data Engineer
+
+Required Skills:
+- Python
+- SQL
+- Apache Spark
+- AWS
+- ETL Pipelines
+- Data Warehousing
+
+Responsibilities:
+- Build ETL pipelines
+- Process large datasets
+- Work with cloud technologies

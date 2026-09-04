@@ -1,0 +1,16 @@
+venv/
+__pycache__/
+*.pyc
+*.log
+
+# Spark
+*.crc
+metastore_db/
+spark-warehouse/
+
+# Airflow
+airflow.db
+logs/
+
+# Kafka temp
+tmp/

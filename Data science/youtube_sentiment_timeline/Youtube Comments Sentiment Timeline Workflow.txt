@@ -1,0 +1,55 @@
+
+Youtube Comments Sentiment Timeline Analysis Workflow
+
+
+Start
+  ↓
+Collect YouTube Comments
+(YouTube API / Dataset)
+  ↓
+Store Comments in CSV
+(comments.csv)
+  ↓
+Data Preprocessing
+  - Lowercase conversion
+  - Remove special characters
+  - Remove stopwords
+  ↓
+Text Vectorization
+(TF-IDF)
+  ↓
+Train/Test Split
+(80% Train, 20% Test)
+  ↓
+Model Training
+(Logistic Regression)
+  ↓
+Save Model
+(sentiment_model.pkl)
+(vectorizer.pkl)
+  ↓
+User Enters Comment
+  ↓
+TF-IDF Transformation
+  ↓
+Sentiment Prediction
+  ↓
+Output:
+Positive / Negative / Neutral
+  ↓
+End
+
+
+"The YouTube Sentiment Analysis system analyzes user comments and classifies them as Positive, Negative, or Neutral. First, comments are collected and preprocessed. Then TF-IDF converts text into numerical vectors. A Logistic Regression model is trained using labeled comments. The trained model is integrated with a Flask web application where users can enter comments and instantly receive sentiment predictions."
+
+Advantages
+
+Analyzes audience feedback automatically.
+Fast sentiment detection.
+Useful for content creators and businesses.
+
+Disadvantages
+
+May not understand sarcasm.
+Accuracy depends on dataset quality.
+Complex language can cause misclassification.

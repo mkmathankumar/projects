@@ -1,0 +1,46 @@
+AI interview prep couch workflow
+
+
+Job Description Upload
+        ↓
+AI Reads JD
+        ↓
+Generate Interview Questions
+        ↓
+User Answers
+        ↓
+AI Evaluates Answer
+        ↓
+Feedback + Score
+
+
+AI Interview Prep Coach is a web application that helps users prepare for interviews.
+
+The user uploads a Job Description (JD). The AI analyzes the required skills and generates interview questions related to that job role. The user then answers the questions, and the AI evaluates the answers and provides feedback, scores, strengths, weaknesses, and improvement suggestions.
+
+This helps candidates practice interviews and improve their communication and technical knowledge before attending real interviews.
+
+
+Technologies Used
+
+Frontend: Streamlit
+Backend: Python
+AI Model (LLM): Gemini
+RAG: FAISS + Embeddings (optional advanced feature)
+
+Advantages
+
+Helps candidates prepare for interviews.
+Generates role-specific interview questions.
+Provides instant feedback and scores.
+Improves confidence and communication skills.
+Available anytime without a human interviewer.
+Saves time and effort in interview preparation.
+
+Disadvantages
+
+Feedback depends on AI accuracy.
+Cannot fully judge body language or facial expressions.
+Requires internet connection.
+May not perfectly match every company's interview style.
+Advanced AI features may require API usage limits.

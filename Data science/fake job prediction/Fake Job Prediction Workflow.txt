@@ -1,0 +1,53 @@
+
+Fake Job Prediction Workflow
+
+
+Start
+  ↓
+Generate Dataset
+(generate_data.py)
+  ↓
+Dataset (CSV File)
+fake_job_postings.csv
+  ↓
+Data Preprocessing
+(TF-IDF Vectorization)
+  ↓
+Train/Test Split
+(80% Train, 20% Test)
+  ↓
+Model Training
+(Logistic Regression)
+  ↓
+Save Model
+(fake_job_model.pkl)
+(vectorizer.pkl)
+  ↓
+Flask Web Application
+(app.py)
+  ↓
+User Enters Job Description
+  ↓
+TF-IDF Conversion
+  ↓
+Prediction by Model
+  ↓
+Real Job / Fake Job Result
+  ↓
+End
+
+
+"This project is a Machine Learning based Fake Job Detection System. First, we generate a dataset containing genuine and fraudulent job postings. The dataset is converted into numerical features using TF-IDF Vectorization. Then the data is split into training and testing sets. We train a Logistic Regression model to classify jobs as real or fake. After training, the model and vectorizer are saved using Joblib. A Flask web application allows users to enter a job description. The input text is transformed using the saved vectorizer and passed to the trained model, which predicts whether the job posting is genuine or fake and displays the result to the user."
+
+Advantages
+
+Detects fake job postings quickly.
+Helps job seekers avoid scams.
+Simple and easy to use.
+Fast prediction.
+
+Disadvantages
+
+Dataset is small.
+Accuracy depends on training data quality.
+Cannot detect all sophisticated scams.
